@@ -1,0 +1,14 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/>// Basic Traffic Racing Game 🚗
+// By Winston & Samir
+
+const car = document.getElementById("car");
+let position = 150;
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft" && position > 0) {
+    position -= 15;
+  } else if (event.key === "ArrowRight" && position < 300) {
+    position += 15;
+  }
+  car.style.left = position + "px";
+});
